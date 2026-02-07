@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: h1b_staged_data  # This is the "nickname" dbt will use
+    database: h1b-analytics # Your Google Project ID
+    schema: h1b_staged     # Your Silver Dataset
+    tables:
+      - name: silver_h1b_2025 # The table we successfully loaded earlier
