@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_h1b_branded
+    description: "H1B data with cleaned and branded employer names."
+    columns:
+      - name: final_employer_name
+        description: "The standardized name of the employer after cleaning and mapping."
+        data_tests:
+          - not_null: # <--- Added the colon here
+              config:
+                severity: Warn

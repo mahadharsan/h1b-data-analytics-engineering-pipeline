@@ -6,7 +6,8 @@ select
     -- We use the FINAL_EMPLOYER_NAME we created in the last step
     final_employer_name as employer_name,
     fiscal_year,
-    state,
+    concat('US-', upper(state)) as state_us,
+    city,
     
     -- Summing up all the different approval types
     sum(new_emp_app + cont_app + same_emp_app + change_emp_app + amended_app) as total_approvals,
@@ -27,5 +28,5 @@ select
     ) * 100 as approval_percentage
 
 from branded_data
-group by 1, 2, 3
+group by 1, 2, 3, 4
 order by total_applications desc
