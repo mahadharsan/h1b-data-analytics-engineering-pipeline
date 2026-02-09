@@ -6,7 +6,7 @@ select
     -- We use the FINAL_EMPLOYER_NAME we created in the last step
     final_employer_name as employer_name,
     fiscal_year,
-    state,
+    concat('US-', upper(state)) as state_iso,
     
     -- Summing up all the different approval types
     sum(new_emp_app + cont_app + same_emp_app + change_emp_app + amended_app) as total_approvals,
