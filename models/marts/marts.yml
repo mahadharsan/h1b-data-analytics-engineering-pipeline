@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fct_h1b_employer_metrics
+    description: "The final gold-layer table containing H1B approval rates and hiring volumes per employer, state, and year."
+    columns:
+      - name: employer_name
+        description: "The cleaned name of the employer (Standardized via Entity Resolution)."
+        tests:
+          - not_null
+
+      - name: fiscal_year
+        description: "The year the application was filed (2023-2025)."
+        tests:
+          - not_null
+
+      - name: approval_percentage
+        description: "The calculated success rate of applications."

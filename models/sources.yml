@@ -5,4 +5,6 @@ sources:
     database: h1b-analytics # Your Google Project ID
     schema: h1b_staged     # Your Silver Dataset
     tables:
-      - name: silver_h1b_2025 # The table we successfully loaded earlier
+      - name: silver_h1b_2025 
+      - name: silver_h1b_2024
+      - name: silver_h1b_2023
