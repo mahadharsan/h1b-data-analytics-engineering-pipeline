@@ -1,2 +1,20 @@
-# h1b-data-analytics-engineering-pipeline
-End-to-end data pipeline using Airbyte, BigQuery, PySpark, and dbt to analyze H1B visa trends.
+# H1B Visa Analytics Engineering Pipeline (2023-2025)
+
+## 🎯 Project Objective
+Processed and analyzed **200,000+ raw USCIS records** representing **1.2M+ H1B applications**. The core challenge was performing **Entity Resolution** on 100k+ messy employer names to provide accurate sponsorship insights.
+
+## 🏗️ Technical Architecture
+**Postgres** ➔ **Airbyte** ➔ **BigQuery** ➔ **PySpark** ➔ **dbt** ➔ **Looker Studio**
+
+* **Ingestion:** Airbyte managed EL from Postgres to BigQuery.
+* **Processing:** PySpark for initial large-scale cleaning and data type standardization.
+* **Modeling:** dbt (Data Build Tool) for modular SQL modeling (Staging -> Intermediate -> Marts).
+* **BI:** Looker Studio for geospatial and time-series trend analysis.
+
+## 🛠️ Key Engineering Features
+* **Regex-based Entity Resolution:** Consolidated variations of employer names (e.g., "Amazon.com Services LLC" vs "Amazon") using dbt macros.
+* **Automated Data Lineage:** Full documentation of the 3-layer dbt architecture.
+* **Dynamic Analytics:** Integrated 3 years of visa data with a 3.97 GPA level of precision (wit intended!).
+
+## 📊 Dashboard
+[Link to Looker Studio Dashboard](https://lookerstudio.google.com/reporting/c1a28f6a-c990-4c2b-995d-7e3c834f3d10)
