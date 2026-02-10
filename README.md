@@ -16,7 +16,15 @@ Processed and analyzed **200,000+ raw USCIS records** representing **1.2M+ H1B a
 * **Modeling:** dbt (Data Build Tool) for modular SQL modeling (Staging -> Intermediate -> Marts).
 * **BI:** Looker Studio for geospatial and time-series trend analysis.
 
+### 🔗 Data Lineage (Medallion Architecture)
 The dbt pipeline follows a **Medallion Architecture** (Bronze, Silver, Gold) to transform 200k raw records into high-fidelity analytical marts.
+The project utilizes a modular dbt structure to ensure data integrity and traceability:
+1. **Staging (Bronze):** Initial casting and renaming of raw USCIS BigQuery tables.
+2. **Intermediate (Silver):** Applied Entity Resolution logic and regex cleaning to unify employer names.
+3. **Marts (Gold):** Final fact tables optimized for Looker Studio performance.
+
+![dbt Lineage Graph](assets/lineage_graph.png)
+
 
 ## 🛠️ Key Engineering Features
 * **Regex-based Entity Resolution:** Consolidated variations of employer names (e.g., "Amazon.com Services LLC" vs "Amazon") using dbt macros.
