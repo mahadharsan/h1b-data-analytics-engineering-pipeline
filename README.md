@@ -27,7 +27,7 @@ The project utilizes a modular dbt structure to ensure data integrity and tracea
 
 
 ## 🛠️ Key Engineering Features
-* **Regex-based Entity Resolution:** Consolidated variations of employer names (e.g., "Amazon.com Services LLC" vs "Amazon") using dbt macros.
+* **Regex-based Entity Resolution:** Consolidated variations of employer names (e.g., "Amazon.com Services LLC" vs "Amazon") using dbt seeds.
 * **Automated Data Lineage:** Full documentation of the 3-layer dbt architecture.
 * **Dynamic Analytics:** Integrated 3 years of visa data with a 3.97 GPA level of precision (wit intended!).
 
