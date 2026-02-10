@@ -23,7 +23,7 @@ The project utilizes a modular dbt structure to ensure data integrity and tracea
 2. **Intermediate (Silver):** Applied Entity Resolution logic and regex cleaning to unify employer names.
 3. **Marts (Gold):** Final fact tables optimized for Looker Studio performance.
 
-![dbt Lineage Graph](assets/lineage_graph.png)
+![dbt Lineage Graph](assets/lineage graph.png)
 
 
 ## 🛠️ Key Engineering Features
