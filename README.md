@@ -1,7 +1,7 @@
 # H1B Visa Analytics Engineering Pipeline (2023-2025)
 
 ## 🎯 Project Objective
-Processed and analyzed **200,000+ raw USCIS records** representing **1.2M+ H1B applications**. The core challenge was performing **Entity Resolution** on 100k+ messy employer names to provide accurate sponsorship insights.
+Processed and analyzed **200,000+ raw USCIS records** representing **1.2M+ H1B applications**. The core challenge was performing **Entity Resolution** on 10k+ messy employer names to provide accurate sponsorship insights.
 
 ## 🏗️ Technical Architecture
 **Postgres** ➔ **Airbyte** ➔ **BigQuery** ➔ **PySpark** ➔ **dbt** ➔ **Looker Studio**
